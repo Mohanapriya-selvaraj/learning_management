@@ -4,6 +4,13 @@ app_publisher = "mona"
 app_description = "Learning Management System"
 app_email = "mona@2006"
 app_license = "mit"
+app_include_js="custom_desk.bundle.js"
+
+doc_events = {
+    "ToDo": {
+        "validate": "learning_management.api.custom_logic"
+    }
+}
 
 # Apps
 # ------------------
@@ -245,7 +252,7 @@ app_license = "mit"
 # ]
 
 # Automatically update python controller files with type annotations for this app.
-# export_python_type_annotations = True
+export_python_type_annotations = True
 
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
