@@ -1,8 +1,8 @@
-# Byte-compiled / optimized / DLL files
+
+
+
+ Byte-compiled / optimized / DLL files
 __pycache__/
-
-
-
 *.py[cod]
 *$py.class
 *.pyc
@@ -56,4 +56,3 @@ jspm_packages/
 
 # Aider AI Chat
 .aider*
-node_modules/

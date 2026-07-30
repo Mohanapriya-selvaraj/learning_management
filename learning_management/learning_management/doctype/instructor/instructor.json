@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "field:instructor_name",
+ "creation": "2026-07-20 12:43:06.377306",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "instructor_details_section",
+  "instructor_name",
+  "gender",
+  "photo",
+  "column_break_0blb",
+  "email",
+  "phone",
+  "known_techstack",
+  "tab_break_7hak",
+  "professional_information_section",
+  "qualification",
+  "active",
+  "column_break_ei7o",
+  "experience",
+  "tab_3_tab",
+  "summary_html"
+ ],
+ "fields": [
+  {
+   "fieldname": "instructor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Instructor Name",
+   "options": "Student Skill",
+   "unique": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Data",
+   "label": "Qualification"
+  },
+  {
+   "fieldname": "experience",
+   "fieldtype": "Int",
+   "label": "Experience"
+  },
+  {
+   "fieldname": "professional_information_section",
+   "fieldtype": "Section Break",
+   "label": "Professional Information"
+  },
+  {
+   "fieldname": "instructor_details_section",
+   "fieldtype": "Section Break",
+   "label": "Instructor details"
+  },
+  {
+   "fieldname": "column_break_ei7o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_0blb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "active",
+   "fieldtype": "Select",
+   "label": "Active",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "known_techstack",
+   "fieldtype": "Table MultiSelect",
+   "label": "Known Techstack",
+   "options": "Instructor Course"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "tab_break_7hak",
+   "fieldtype": "Tab Break",
+   "label": "Professional Information"
+  },
+  {
+   "fieldname": "tab_3_tab",
+   "fieldtype": "Tab Break",
+   "label": "Instructor Summary"
+  },
+  {
+   "fieldname": "summary_html",
+   "fieldtype": "HTML",
+   "label": "Instructor Summary"
+  }
+ ],
+ "grid_page_length": 50,
+ "image_field": "photo",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-24 18:56:44.679197",
+ "modified_by": "Administrator",
+ "module": "Learning Management",
+ "name": "Instructor",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
