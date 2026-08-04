@@ -5,6 +5,7 @@ import frappe
 from frappe.model.document import Document
 
 class Student(Document):
+   
 
     def validate(self):
         if self.age and self.age < 5:

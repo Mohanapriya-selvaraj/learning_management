@@ -5,13 +5,22 @@ app_description = "Learning Management System"
 app_email = "mona@2006"
 app_license = "mit"
 app_include_js="custom_desk.bundle.js"
-
+app_include_css = "/assets/learning_management/css/custom.css"
 doc_events = {
     "ToDo": {
         "validate": "learning_management.api.custom_logic"
     }
 }
-
+doctype_js = {
+    "Course": "public/js/course_custom.js"
+}
+#scheduler_events = {
+   # "cron": {
+ #       "* * * * *": [
+   #         "learning_management.tasks.send_email_every_minute"
+  #      ]
+ #   }
+#}
 # Apps
 # ------------------
 
@@ -28,7 +37,7 @@ doc_events = {
 # 	}
 # ]
 
-# Includes in <head>
+# Includes in <head>  *Asset Hooks*
 # ------------------
 
 # include js, css files in header of desk.html
@@ -54,7 +63,7 @@ doc_events = {
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-
+#                     *Asset Hooks*
 # Svg Icons
 # ------------------
 # include app icons in desk
@@ -252,7 +261,7 @@ doc_events = {
 # ]
 
 # Automatically update python controller files with type annotations for this app.
-export_python_type_annotations = True
+#export_python_type_annotations = True
 
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
