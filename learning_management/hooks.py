@@ -5,15 +5,21 @@ app_description = "Learning Management System"
 app_email = "mona@2006"
 app_license = "mit"
 app_include_js="custom_desk.bundle.js"
-app_include_css = "/assets/learning_management/css/custom.css"
+app_include_css = ["/assets/learning_management/css/custom.css","/assets/learning_management/css/course.css"]
 doc_events = {
     "ToDo": {
         "validate": "learning_management.api.custom_logic"
+    },
+    "Student": {
+        "after_insert": "learning_management.events.sync_student_id_card",
+        "on_update": "learning_management.events.sync_student_id_card"
     }
 }
+
 doctype_js = {
     "Course": "public/js/course_custom.js"
 }
+after_migrate = "learning_management.events.after_migrate"
 #scheduler_events = {
    # "cron": {
  #       "* * * * *": [
@@ -21,6 +27,21 @@ doctype_js = {
   #      ]
  #   }
 #}
+doctype_list_js = {
+    "Course": "public/js/course_list.js"
+}
+
+website_generators = ["Course"]
+importable_doctypes = ["Course"]
+permission_query_conditions = {
+    "Studenttest": "learning_management.permissions.studenttest.get_permission_query_conditions"
+}
+has_permission = {"Studenttest": "learning_management.permissions.studenttest.has_permission" }
+scheduler_events = {
+    "daily": [
+        "learning_management.tasks.daily_maintenance"
+    ]
+}
 # Apps
 # ------------------
 
