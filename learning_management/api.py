@@ -41,3 +41,30 @@ def student_summary():
 
   
     return results
+
+
+def send_sms(receiver_list, msg, success_msg=None, success_url=None):
+    print("Receiver:", receiver_list)
+    print("Message:", msg)
+
+
+@frappe.whitelist()
+def get_recent_todos():
+    timestamp = frappe.utils.now()
+    todos=frappe.get_list(
+        "ToDo",
+        fields=["name","description","owner"],
+        order_by="creation desc",
+        limit_page_length=5
+    )
+    for todo in todos:
+        email = frappe.db.get_value(
+            "User",
+            todo.owner,
+            "email"
+        )
+        todo["owner_email"]=email
+    return {
+    "timestamp": timestamp,
+    "records": todos
+}
